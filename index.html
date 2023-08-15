@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      #myId {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        background-color: #312f30;
+      }
+      .person {
+        width: 100%;
+        max-width: 340px;
+        border-radius: 10px;
+        background-color: #1e1b1e;
+        padding: 5px 20px;
+        margin: 5px;
+        color: #5c585c;
+        box-shadow: inset 3px 4px 8px rgba(255, 255, 255, 0.3);
+      }
+      h2 {
+        font-size: 1.5rem;
+        font-style: italic;
+        text-shadow: inset 3px 4px 8px rgba(255, 255, 255, 0.3);
+      }
+      p {
+        font-size: 1rem;
+        text-shadow: inset 3px 4px 8px rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="darkMode">dark</button>
+    <br />
+    <img
+      src="https://images.pexels.com/photos/15382556/pexels-photo-15382556/free-photo-of-a-beach-covered-in-snow-and-the-seascape-under-a-cloudy-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      width="300px"
+      alt=""
+    />
+    <!-- <div id="myId"></div> -->
+    <script>
+      ("use strict");
+      let darkModeEl = document.querySelector(".darkMode");
+      let dark = true;
+      darkModeEl.addEventListener("click", () => {
+        dark = !dark;
+        document.body.style.background = dark ? "#3e3e3e" : "#c1c1c1";
+        darkModeEl.innerHTML = dark ? "⚫" : "⚪";
+      });
+      document.body.style.background = dark ? "#3e3e3e" : "#c1c1c1";
+      darkModeEl.innerHTML = dark ? "⚫" : "⚪";
+      //   let myIdEl = document.querySelector("#myId");
+      //   myIdEl.classList.add("demo");
+      //   console.log(myIdEl);
+
+      //   function restParams(num1, num2, num3, ...rest) {
+      //     let total = 0;
+      //     for (let number of rest) {
+      //       total += number;
+      //     }
+      //     console.log(total);
+      //   }
+      //   restParams(1, 2, 3, 4, 5, 6);
+      //   let person = {
+      //     safin: {
+      //       name: "sadman safin",
+      //       age: 1.5,
+      //       sex: "male",
+      //     },
+      //     mizan: {
+      //       name: "mizanur rahman",
+      //       age: 29,
+      //       sex: "male",
+      //     },
+      //     sahanaj: {
+      //       name: "sahanaj parvin",
+      //       age: 25,
+      //       sex: "female",
+      //     },
+      //   };
+      //   for (let individual in person) {
+      //     let individualPeople = person[individual];
+      //     myIdEl.innerHTML += `
+      //       <div class="person">
+      //           <h2>NAME: ${individualPeople.name.toUpperCase()} </h2>
+      //           <p>AGE: ${individualPeople.age} </p>
+      //           <p>SEX: ${individualPeople.sex.toUpperCase()} </p>
+      //       </div>
+      //     `;
+      //   }
+    </script>
+  </body>
+</html>
